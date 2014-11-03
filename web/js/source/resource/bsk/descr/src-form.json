@@ -1,0 +1,25 @@
+{
+    type : "form",
+    toolbar : [
+        {type : "back"}
+    ],
+    fields : [
+        {name : "id",   alias : "#", input : {type : "hidden"}},
+        {name : "name",   alias : "Имя", input : {type : "text-field"},validation : {type : "string-max", max : 50, required : true}},
+        {name : "url",   alias : "URL", input : {type : "text-field"},validation : {type : "string-max", max : 200, required : true}},
+        {name : "regexp",   alias : "Regexp", input : {type : "text-area"},validation : {type : "string-max", max : 5000, required : true}},
+        {name : "encoding", alias : "кодировка страницы", input : {
+            type : "select-box",
+            select_id : "encoding",
+            select_display_name : "encoding",
+            values_url : "/get-encoding"
+        }},
+    ],
+
+    render : "single",
+
+    index_name : "id", 
+    formdata_url : "/get-src-info",
+    submit_url : "/update-src", 
+    req_type : "POST"
+}

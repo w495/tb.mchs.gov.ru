@@ -1,0 +1,40 @@
+
+#logo-container{
+	padding-top: 0px;
+	background-image: url(css-images/fon/top-logo-line.png);
+	background-repeat: repeat-x;
+	height: 246px;
+	padding-left: 0;
+}
+
+#logo{	
+	padding-left: 7px;
+	padding-right: 7px;
+	width: 220px;
+	text-align: center;
+	vertical-align: middle;
+	
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#slide-show-holder{
+	text-align: left;
+	margin-left: 5px;
+	padding-top: 10px;
+	
+	display: table-cell;
+	vertical-align: top;
+}
+
+
+#logo-image{
+	background-image: url(css-images/logo.png);
+	width: 124px;
+	height: 156px;
+}
+
+#logo-caption{
+	color: #ffffff;
+	font-size: 90%;
+}

@@ -1,0 +1,70 @@
+
+#logo-container{
+	padding:0;
+	background-image: url(css-images/fon/top-logo-line.png);
+	background-repeat: repeat-x;
+	height: 246px;
+
+}
+
+#logo-flag{
+	background-image: url(css-images/flag.png);
+	background-repeat: no-repeat;
+	height: 246px;
+    background-position: right;
+	margin:0;
+	padding:0;
+}
+
+#logo{
+	margin:0;
+	padding:0;
+	width: 220px;
+	text-align: center;
+	display: inline-block;
+	font-size: 90%;
+}
+
+#logo-image{
+	background-image: url(css-images/logo.png); 
+	width: 124px;
+	height: 156px;
+	border: none;
+}
+
+#logo-caption{
+	color: #ffffff;
+}
+
+
+#transport-container{
+	vertical-align: text-bottom;
+	display: inline-block;
+	margin:0px;
+	padding:0px;
+}
+
+a.transport-type{
+	margin:0px;
+	padding:0px;
+	display: inline-block;
+	width: 248px;
+	height: 133px;
+	position: relative;
+	top: 20px;
+    vertical-align: bottom;
+    text-decoration: none;
+	background-repeat: no-repeat;
+}
+
+#surface-transport{
+	background-image: url(css-images/transport/surface-transport-blue.png);
+}
+
+#air-transport{
+	background-image: url(css-images/transport/air-transport-blue.png);
+}
+
+#water-transport{
+	background-image: url(css-images/transport/water-transport-blue.png);
+}

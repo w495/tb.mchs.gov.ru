@@ -1,0 +1,33 @@
+#transport-container{
+	background-color: #e4e4e4;	
+	min-height: 122px;
+	text-align: center;
+}
+
+#transport-container a.transport-type{
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 227px;
+	height: 112px;
+	
+	/*
+	margin-left: 5%;
+	margin-right: 5%;
+	*/
+	
+	margin-left: 20px;
+	margin-right: 20px;
+	
+}
+
+#surface-transport{
+	background-image: url(css-images/transport/surface-transport-orange.png);
+}
+
+#air-transport{
+	background-image: url(css-images/transport/air-transport-orange.png);
+}
+
+#water-transport{
+	background-image: url(css-images/transport/water-transport-orange.png);
+}

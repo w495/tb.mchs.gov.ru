@@ -1,0 +1,134 @@
+
+/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+
+#search-body{
+    padding-top: 20px;
+    width: 700px;
+}
+
+
+#long-search-submitter{
+    margin-left: 2px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	color: #363636; 
+    background-color: #cccccc;
+    border: #565656 1px solid; 
+	-webkit-border-radius: 3px; 	/*Ch*/
+	-moz-border-radius: 3px; 		/*FF*/ 
+	border-radius: 3px; 			/*IE*/
+    
+    cursor: pointer;
+}
+
+#long-search-submitter:hover{
+    border: #161616 1px solid;
+
+}
+
+#search-body .gsc-wrapper{
+    margin: 0;
+    padding: 0;
+    display: block;
+    vertical-align: top;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+#search-body .gsc-search-button input.gsc-search-button{
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	color: #363636;
+	border: #61c6ed 1px solid;
+	-webkit-border-radius: 3px; 	/*Ch*/
+	-moz-border-radius: 3px; 		/*FF*/ 
+	border-radius: 3px; 			/*IE*/
+    cursor: pointer;
+}
+
+#search-body .gsc-adBlock{
+    display: none;
+}
+
+
+
+.gsc-control-cse .gs-result .gs-title{
+    color: #125d8a;
+    text-transform: none;    
+}
+
+.gsc-control-cse .gs-result div.gs-title * {
+    color: #125d8a;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.gsc-control-cse .gs-result div.gs-title {
+    font-size: 120%;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.gsc-control-cse .gs-result .gs-title a{
+    text-decoration: underline;
+}
+    
+.gsc-control-cse .gs-result .gs-title a:hover {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.gsc-control-cse .gs-result .gs-title a b {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.gsc-control-cse .gs-result .gs-title a:hover {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.gs-result div.gs-visibleUrl{
+    /* color: #125d8a; */
+    /* color: black; */
+    display: none;
+    
+}
+
+div.gsc-webResult div.gsc-result {
+    border-bottom: 1px solid #ebebeb;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+
+div.gsc-results div.gsc-cursor-box div.gsc-cursor-current-page{
+    color: #125d8a;
+    text-decoration: underline;
+}
+
+div.gsc-results div.gsc-cursor-box div.gsc-cursor-page  {
+    color: #125d8a;
+}
+
+.gcsc-branding{
+    display: none;
+}
+
+div.gs-webResult div.gs-result div.gs-no-results-result * {
+    background-color: inherit;
+    border: none;
+}
+
+div.gs-no-results-result .gs-snippet, .gs-error-result div.gs-snippet {
+    background: none;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+/* ------------------------------------------------------------------ */

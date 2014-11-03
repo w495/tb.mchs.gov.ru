@@ -1,0 +1,48 @@
+{
+    type : "table",
+    toolbar : [
+    // Пустой toolbar с кнопкой Выход
+        
+    /*
+        // Создавать права нельзя
+            {type : "button", name : "Создать",
+            action : "resource/bsk/descr/permission-form.json",
+            icon : "icon/32/apps/preferences-users.png"},
+
+        // Редактировать права нельзя
+        {type : "button", name : "Редактировать",
+            action : "resource/bsk/descr/permission-form.json",
+            icon : "icon/32/actions/zoom-in.png", specParam: "tab-row"},
+
+        // Удалять права нельзя
+        {type : "button", name : "Удалить",
+            action : "/delete-customer",
+            icon : "icon/32/actions/edit-delete.png",
+            specParam: "tab-row-action",
+            confirmMsg : "Уверены ли вы в том что хотите удалить разрешение?"}
+    */
+
+    ],
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "name", alias : "Имя", type : "string", sortable : true},
+        {name : "description", alias : "Описание", type : "string", sortable : true},
+
+        // Стремные поля: {
+            {name : "type", alias : "Тип", type : "float", sortable : true},
+            {name : "entity_id", alias : "entity_id",
+                type : "float", sortable : true},
+            {name : "perm_type_id", alias : "perm_type_id ",
+                type : "float", sortable : true},
+        // }
+    ],
+
+    filter : {
+        submit_url : "/get-permissions"
+    },
+
+    sort : "id",
+    ascending : false,
+
+    dblclick_action : "resource/bsk/descr/permission-form.json"
+}

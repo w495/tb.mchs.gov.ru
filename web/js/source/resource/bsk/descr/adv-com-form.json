@@ -1,0 +1,8 @@
+{
+    type : "form",
+    controller : "advComForm",
+    toolbar : [
+        {type : "back"}
+    ]
+
+}

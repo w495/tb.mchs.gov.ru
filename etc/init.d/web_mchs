@@ -1,0 +1,44 @@
+#!/bin/sh
+# chkconfig: - 85 15
+# description: VerliHub Start Script
+# Start VerliHub p2p-server
+# processname: verlihub
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# копируем в /etc/init.d
+# update-rc.d web_mchs defaults
+
+# fedora: chkconfig --add web_mchs
+# chkconfig  web_mchs on
+set -e
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin
+HOME=/root
+WORK_DIR=/var/MCHS/web
+#HOME=/home/cff
+#WORK_DIR=/home/cff/work/mchs/web
+CTL_SCRIPT=$WORK_DIR/ctl
+USER=root
+
+export HOME
+
+case "$1" in
+    start)
+      cd $WORK_DIR
+      sudo -u $USER -H $CTL_SCRIPT start
+      ;;
+    stop)
+      cd $WORK_DIR
+      $CTL_SCRIPT stop
+      ;;
+    status)
+      cd $WORK_DIR
+      $CTL_SCRIPT status
+      ;;
+    *)
+      echo "Usage: /etc/init.d/web_mchs {start|stop|status}"
+      exit 1
+      ;;
+esac
+
+exit 0

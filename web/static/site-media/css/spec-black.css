@@ -1,0 +1,27 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+.relief{
+    color: black;
+    background-color: white;
+}
+
+
+#logo-image{
+	background-image: url(css-images/logo-trans-black.png);
+}
+
+#surface-transport{
+	background-image: url(css-images/transport/surface-transport-tr-white.png);
+}
+
+#air-transport{
+	background-image: url(css-images/transport/air-transport-tr-white.png);
+}
+
+#water-transport{
+	background-image: url(css-images/transport/water-transport-tr-white.png);
+}
+

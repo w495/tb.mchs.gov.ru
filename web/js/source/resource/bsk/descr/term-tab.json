@@ -1,0 +1,46 @@
+{
+    type : "table",
+    toolbar : [
+        {type : "button", name : "Создать",
+            action : "resource/bsk/descr/term-form.json",
+            icon : "icon/32/apps/preferences-users.png"},
+
+        {type : "button", name : "Редактировать",
+            action : "resource/bsk/descr/term-form.json",
+            icon : "icon/32/actions/zoom-in.png",
+            specParam: "tab-row"},
+
+        {type : "button",
+            name : "Удалить",
+            action : "/delete-doc",
+            icon : "icon/32/actions/edit-delete.png",
+            specParam: "tab-row-action",
+            confirmMsg : "Уверены ли вы в том что хотите удалить пользователя?"}
+    ],
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "datatime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+        {name : "name", alias : "Имя", type : "string", sortable : true},
+        {name : "published", alias : "Опубликован", type : "checkbox", sortable : true},
+        {name : "dir_id", alias : "Тип", type : "enum",
+            dict: {  7: "Общий термин",
+                     8: "Воздушный термин",
+                     9: "Водные теримн",
+                    10: "Наземный теримин",
+                    default: 'Термин без категории'}, sortable : true}
+    ],
+
+    filter : {
+        submit_url : "/get-docs-recursive"
+    },
+
+    vardata : { /* изменяемая часть данных*/
+        id:  7 // 5 | Термины          |    
+    },
+
+    // sort : "datatime",
+    sort : "datatime",
+    ascending : false,
+
+    dblclick_action : "resource/bsk/descr/term-form.json"
+}

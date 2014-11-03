@@ -1,0 +1,37 @@
+{
+    type : "table",
+    toolbar : [
+        {type : "button", name : "Создать",
+            action : "resource/bsk/descr/adv-com-form.json",
+            icon : "icon/32/apps/preferences-users.png"},
+
+        {type : "button", name : "Редактировать",
+            action : "resource/bsk/descr/adv-com-form.json",
+            icon : "icon/32/actions/zoom-in.png",
+            specParam: "tab-row"},
+
+        {type : "button",
+            name : "Удалить",
+            action : "/delete-adv-com",
+            icon : "icon/32/actions/edit-delete.png",
+            specParam: "tab-row-action",
+            confirmMsg : "Уверены ли вы в том что хотите удалить рекламную компанию?"}
+    ],
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "name", alias : "Название", type : "string", sortable : true},
+        {name : "datestart", alias : "Дата начала", type : "erl_datetime", sortable : true},
+        {name : "datestop", alias : "Дата конца", type : "erl_datetime", sortable : true},
+        {name : "alias", alias : "место банера", type : "string", sortable : true}
+    ],
+
+    filter : {
+        submit_url : "/get-adv-coms"
+    },
+
+    // sort : "datatime",
+    sort : "id",
+    ascending : false,
+
+    dblclick_action : "resource/bsk/descr/adv-com-form.json"
+}

@@ -1,0 +1,39 @@
+{
+    type : "table",
+    toolbar : [
+        {type : "button", name : "Создать",
+            action : "resource/bsk/descr/conf-form.json",
+            icon : "icon/32/apps/preferences-users.png"},
+
+        { type : "button", name : "Редактировать конференцию",
+            action : "resource/bsk/descr/conf-form.json",
+            icon : "icon/32/actions/zoom-in.png",
+            specParam: "tab-row"
+        },
+
+        {   type : "button",
+            name : "Удалить тест",
+            action : "/delete-dir",
+            icon : "icon/32/actions/edit-delete.png",
+            specParam: "tab-row-action",
+            confirmMsg : "Уверены ли вы в том что хотите удалить пользователя?"
+        }
+    ],
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "datatime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+        {name : "name", alias : "Имя", type : "string", sortable : true},
+    ],
+
+    filter : {
+        submit_url : "/get-dirs"
+    },
+
+    vardata : { /* изменяемая часть данных*/
+        id: 5 //   
+    },
+
+    sort : "datatime",
+    ascending : false,
+    dblclick_action : "resource/bsk/descr/conf-form.json"
+}

@@ -1,0 +1,7 @@
+{
+    type : "form",
+    controller : "testQuestionForm",
+    toolbar : [
+        {type : "back"}
+    ]
+}

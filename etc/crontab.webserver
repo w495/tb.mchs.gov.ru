@@ -1,0 +1,1 @@
+0 2 * * * /usr/bin/pg_dump mchs > /var/MCHS/pgdb.sql

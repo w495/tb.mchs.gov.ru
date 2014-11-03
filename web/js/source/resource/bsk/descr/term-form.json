@@ -1,0 +1,8 @@
+{
+    type : "form",
+    controller : "termForm",
+    toolbar : [
+        {type : "back"}
+    ]
+
+}

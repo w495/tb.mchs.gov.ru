@@ -1,0 +1,30 @@
+{
+    type : "table",
+    toolbar : [
+        {type : "button", name : "подробности",
+            action : "resource/bsk/descr/log-form.json",
+            icon : "icon/32/actions/zoom-in.png",
+            specParam: "tab-row"}
+    ],
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "login", alias : "Пользователь", type : "string", sortable : true},
+        {name : "datetime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+        {name : "log_object_type_alias", alias : "Объект",  type : "string", sortable : true},
+        {name : "log_object_id", alias : "объект #", type : "string", sortable : true}
+    ],
+
+    filter : {
+        submit_url : "/get-logs"
+    },
+
+    vardata : { /* изменяемая часть данных*/
+        id:  7 // 5 | Термины          |    
+    },
+
+    // sort : "datatime",
+    sort : "id",
+    ascending : false,
+
+    dblclick_action : "resource/bsk/descr/log-form.json"
+}

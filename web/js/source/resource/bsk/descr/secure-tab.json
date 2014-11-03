@@ -1,0 +1,92 @@
+{
+    type : "dir-double-table",
+    left: {
+        type : "table",
+        toolbar : [
+            "woexit", // без кнопки выхода
+
+            { type : "button", name : "Назад",
+                icon : "icon/32/actions/go-previous.png",
+                specParam: "tab-change-state-action"
+            },
+
+            { type : "button", name : "Создать папку",
+                action : "resource/bsk/descr/dir-form.json",
+                icon : "icon/32/apps/preferences-users.png",
+                specParam: "tab-change-state"
+            },
+    
+            { type : "button", name : "Редактировать папку",
+                action : "resource/bsk/descr/dir-form.json",
+                icon : "icon/32/actions/zoom-in.png",
+                specParam: "tab-row"
+            },
+    
+            {   type : "button",
+                name : "Удалить папку",
+                action : "/delete-dir",
+                icon : "icon/32/actions/edit-delete.png",
+                specParam: "tab-row-action",
+                confirmMsg : "Уверены ли вы в том что хотите удалить пользователя?"
+            }
+        ],
+        columns : [
+            {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+            {name : "datatime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+
+            {name : "name", alias : "Имя", type : "string", sortable : true}
+        ],
+    
+        filter : {
+            submit_url : "/get-dirs"
+        },
+    
+        vardata : { /* изменяемая часть данных*/
+            id: 4
+        },
+
+        sort : "datatime",
+        ascending : false,    
+        dblclick_action : "resource/bsk/descr/dir-move.json"
+    },
+
+    right: {
+        type : "table",
+        toolbar : [
+
+            {type : "button", name : "Создать документ",
+                action : "resource/bsk/descr/doc-form.json",
+                icon : "icon/32/apps/preferences-users.png",
+                specParam: "tab-change-state"
+            },
+
+
+            {type : "button", name : "Редактировать документ",
+                action : "resource/bsk/descr/doc-form.json",
+                icon : "icon/32/actions/zoom-in.png",
+                specParam: "tab-row"},
+    
+            {type : "button",
+                name : "Удалить документ",
+                action : "/delete-doc",
+                icon : "icon/32/actions/edit-delete.png",
+                specParam: "tab-row-action",
+                confirmMsg : "Уверены ли вы в том что хотите удалить пользователя?"}
+        ],
+        columns : [
+            {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+            {name : "datatime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+            {name : "name", alias : "Имя", type : "string", sortable : true},
+            {name : "published", alias : "Опубликован", type : "checkbox", sortable : true}
+        ],
+    
+        filter : {
+            submit_url : "/get-docs"
+        },
+
+        sort : "datatime",
+        ascending : false,
+    
+        dblclick_action : "resource/bsk/descr/doc-form.json"
+    },
+}

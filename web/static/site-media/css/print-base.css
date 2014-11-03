@@ -1,0 +1,142 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+	/* border: red 1px solid; */
+}
+
+
+body{
+	text-align: left;
+	background-color: #ffffff;
+	font-family: Arial, Geneva, Helvetica, Helios, sans-serif;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: default;
+}
+
+#background{
+	text-align: left;
+	background-color: #ffffff;
+	width: 1000px;
+}
+
+#logo-container{
+	background-color: #e2e2e2;
+}
+
+
+#logo-line{
+	background-color: #e2e2e2;
+	height: 160px;
+	vertical-align: bottom;
+    display: table;
+	padding-left: 75px;
+}
+
+
+#logo{
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#logo-caption{
+	padding-left: 35px;
+	vertical-align: middle;
+	display: table-cell;
+	font-size: 170%;
+}
+
+
+#docs-container{
+	margin-left: 20px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+#docs-container-header{
+	text-transform: uppercase;
+	font-size: 150%;
+}
+
+#dirs-list {
+	border-top: 4px black solid;
+	margin-top: 0px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	
+}
+
+#dirs-list ul{
+	list-style: none;
+}
+
+#dirs-list ul li{
+	list-style: none;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	list-style: none;
+	text-transform: uppercase;
+}
+
+#dirs-list ul a:hover{
+	text-decoration: underline;	
+}
+
+#dirs-list ul li:before { content: "— " }
+
+
+#footer-container{
+	margin-left: 20px;
+	margin-right: 0px;
+    border-top: solid 4px black;
+	margin-top: 1em;
+	padding-top: 1em;
+	font-size: 90%;
+}
+
+#docs-content p{
+    margin-bottom: 0.5em;    
+}
+
+#docs-content ul{
+    margin-left: 1em;    
+}
+
+#doc-body-header{
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+
+#doc-body-text{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    font-size: 80%;
+}
+
+.breakline{
+    height: 0px;
+    background: black;
+    color:inherit;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.second-header{
+	display: inline-block;
+	text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.br{
+    margin-bottom: 1em;
+}

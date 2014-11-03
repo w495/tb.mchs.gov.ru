@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>bsk</title>
+<!--[if IE]>
+<script language="javascript" type="text/javascript" 
+src="plot/excanvas.min.js">
+</script>
+<![endif]-->    
+  <script type="text/javascript" src="script/bsk.js"></script>
+    <style type="text/css">
+        .inner-box {
+            padding:1em;
+        }
+        .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9, .r10 {
+            display: block;
+            height: 1px;
+            overflow: hidden;
+            font-size:1px;
+        }
+        .r10 { margin: 0 10px; }
+        .r9 { margin: 0 9px; }
+        .r8 { margin: 0 8px; }
+        .r7 { margin: 0 7px; }
+        .r6 { margin: 0 6px; }
+        .r5 { margin: 0 5px; }
+        .r4 { margin: 0 4px; }
+        .r3 { margin: 0 3px; }
+        .r2 { margin: 0 2px; }
+        .r1 { margin: 0 1px; }
+        #rounded-box-3, #rounded-box-5, #rounded-box-10 { margin:1em; }
+
+        .inner-box, b { background-color: #CCCCCC; }
+        #rounded-box-3 .inner-box { padding: 1em;}
+        #global_progress_bar .inner-box { padding: 0.7em 1em;}
+        #rounded-box-10 .inner-box { padding: 0.4em 1em;}
+
+        .MyButtonItemInactive {
+            width:  27px;
+            height: 27px;
+            background-image: url("resource/bsk/img/lin-off.png");
+        }
+
+        .MyButtonItemActive {
+            width:  27px;
+            height: 27px;
+            background-image: url("resource/bsk/img/lin-on.png");
+        }
+        
+        
+        #global_progress_bar{
+            position:absolute;
+            left:40%;
+            top:40%;
+            z-index:65535;
+            opacity:0.9;
+        }
+        
+        
+        #upload_progress_bar{
+            width: 100%;
+            height: 100%;
+            z-index:65533;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            display:none;
+        }
+        
+        #upload_progress_back{
+            left:0%;
+            top:0%;
+            width: 100%;
+            height: 100%;
+            z-index:65534;
+            position: absolute;
+            background-color: black;
+            -moz-opacity: 0.7;
+            -khtml-opacity: 0.7;
+            opacity: 0.7;
+            text-align: center;
+            vertical-align: middle;  
+        }
+        
+        .file-uppload-box{
+            position:absolute;
+            left:40%;
+            top:40%;
+            z-index:65535;
+            -webkit-border-radius: 10px; 	/*Ch*/
+            -moz-border-radius: 10px; 		/*FF*/ 
+            border-radius: 10px; 			/*IE*/
+        }
+        
+        .file-uppload-image{
+            position:relative;
+            top:2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="global_progress_bar">
+        <b class="r5"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b><b class="r1"></b>
+        <div class="inner-box" id="global_progress_bar_content">
+            <img src="resource/bsk/img/ff-pb.gif" style="position:relative;top:2px;"/>&nbsp;Загрузка сайта
+        </div>
+        <b class="r1"></b><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r5"></b>
+    </div>
+    <div id="upload_progress_bar">
+        <div  id="upload_progress_back">&nbsp;</div>
+        <div class="inner-box file-uppload-box">
+            <img src="resource/bsk/img/ff-pb.gif" class="file-uppload-image" />&nbsp;Загрузка файла
+        </div>
+    </div>
+<!--<div id='chart-place'></div>-->
+</body>
+</html>

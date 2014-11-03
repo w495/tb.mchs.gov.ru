@@ -1,0 +1,76 @@
+
+#doc-body-header{
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+#doc-body-text{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    font-size: 80%;
+}
+
+.doc-body-border-bar{
+    color: inherit;
+}
+
+
+#doc-body-datetime{
+    padding-top: 4px;
+    padding-bottom: 1px;
+    
+    /*top right*/
+	-webkit-border-top-right-radius: 7px; 	/*Ch*/
+	-moz-border-radius-topright: 7px; 		/*FF*/ 
+	border-top-right-radius: 7px; 			/*IE*/
+
+    /*top left*/    
+	-webkit-border-top-left-radius: 7px; 	/*Ch*/
+	-moz-border-radius-topleft: 7px; 		/*FF*/ 
+	border-top-left-radius: 7px; 			/*IE*/
+}
+
+#doc-body-goback-holder{
+    text-align: right;
+}
+
+#doc-body-goback{
+    padding-top: 1px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    
+    /*top right*/
+	-webkit-border-bottom-right-radius: 7px; 	/*Ch*/
+	-moz-border-radius-bottomright: 7px; 		/*FF*/ 
+	border-bottom-right-radius: 7px; 			/*IE*/
+
+    /*top left*/    
+	-webkit-border-bottom-left-radius: 7px; 	/*Ch*/
+	-moz-border-radius-bottomleft: 7px; 		/*FF*/ 
+	border-bottom-left-radius: 7px; 			/*IE*/    
+}
+
+
+#doc-body-goback a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+#doc-body-attaches{
+    margin-bottom: 1em;
+}
+
+#doc-body-attaches-header{
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    display: block;   
+}
+
+#doc-body-attaches-list{
+    padding-left: 20px;
+    list-style: none;
+}

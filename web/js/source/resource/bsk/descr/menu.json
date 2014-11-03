@@ -1,0 +1,102 @@
+[
+    {
+        name : "Администрирование",
+//        icon : "icon/16/apps/utilities-dictionary.png",
+        opened : true,
+        subitems: [
+            {
+                name : "пользователи",
+                icon : "icon/16/places/network-workgroup.png",
+                model : "resource/bsk/descr/customers-tab.json"
+            },
+            {
+                name : "группы пользователей",
+                icon : "icon/16/apps/preferences-theme.png",
+                model : "resource/bsk/descr/customer-groups-tab.json"
+            },
+            {   name : "права",
+                icon : "icon/16/apps/utilities-keyring.png",
+                model : "resource/bsk/descr/permissions-tab.json"
+            },
+            {
+                name : "источники информации",
+                icon : "icon/16/apps/utilities-keyring.png",
+                model : "resource/bsk/descr/src-tab.json"
+            },
+            {
+                name : "лог изменений",
+                icon : "icon/16/apps/utilities-keyring.png",
+                model : "resource/bsk/descr/log-tab.json"
+            },
+
+            {
+                name : "рекламные компании",
+                icon : "icon/16/apps/utilities-keyring.png",
+                model : "resource/bsk/descr/adv-com-tab.json"
+            }
+        ]
+    },
+    {
+        name : "Объекты",
+//        icon : "icon/16/apps/utilities-dictionary.png",
+        opened : true,
+        subitems: [
+            {
+                name : "Ключевые папки",
+                icon : "icon/16/places/network-workgroup.png",
+                model : "resource/bsk/descr/key-tab.json"
+            },
+            
+            {
+                name : "Новости",
+                icon : "icon/16/places/network-workgroup.png",
+                model : "resource/bsk/descr/news-tab.json"
+            },
+            {
+                name : "Нормативные документы",
+                icon : "icon/16/apps/preferences-theme.png",
+                model : "resource/bsk/descr/regulatory-tab.json"
+            },
+            
+            {
+                name : "Безопасность на транспорте",
+                icon : "icon/16/apps/preferences-theme.png",
+                model : "resource/bsk/descr/secure-tab.json"
+            },
+
+            {
+                name : "Редактирование тестов",
+                icon : "icon/16/apps/preferences-theme.png",
+                model : "resource/bsk/descr/test-tab.json"
+            },
+
+            {
+                name : "Конференции",
+                icon : "icon/16/apps/preferences-theme.png",
+                model : "resource/bsk/descr/conf-tab.json"
+            },
+            
+            {   name : "Термины",
+                icon : "icon/16/apps/utilities-keyring.png",
+                model : "resource/bsk/descr/term-tab.json"
+            }
+        ]
+    },
+    {
+        name : "Игра",
+        opened : true,
+        subitems: [
+            {
+                name : "Редактор",
+                icon : "icon/16/places/network-workgroup.png",
+                model : "resource/bsk/descr/game-editor.json"
+            },
+            {
+                name : "Настройки игры",
+                icon : "icon/16/places/network-workgroup.png",
+                model : "resource/bsk/descr/game-xml-form.json"
+            }
+        ]
+    }
+]
+

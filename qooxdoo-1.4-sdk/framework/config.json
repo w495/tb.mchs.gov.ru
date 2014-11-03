@@ -1,0 +1,273 @@
+{
+  "include" :
+  [
+    {
+      "path" : "${QOOXDOO_PATH}/tool/data/config/application.json"
+    },
+
+    {
+      "path" : "image.json"
+    }
+  ],
+
+  "export":
+  [
+    "api",
+    "api-data",
+    //"build",
+    "clean",
+    "distclean",
+    "fix",
+    "images",
+    "lint",
+    "lint-test",
+    "provider",
+    "test",
+    "test-inline",
+    "test-source",
+    "test-performance",
+    "test-performance-source",
+    "translation",
+    "qxoo-build",
+    "qxoo-noopt"
+  ],
+
+
+  "let" :
+  {
+    "APPLICATION"  : "qx",
+    "QOOXDOO_PATH" : "..",
+    "API_EXCLUDE"  : ["qx.test.*"],
+    "TEST_INCLUDE" : "qx.test.*",
+    "LOCALES"      : [ "de", "en", "es", "fr", "it", "nl", "no", "sv","ro" ],
+    "CACHE"        : "${TMPDIR}/qx${QOOXDOO_VERSION}/cache"
+  },
+
+  "jobs":
+  {
+
+    "qxoo" : 
+    {
+      "library" :
+      [
+        {
+          "manifest" : "${QOOXDOO_PATH}/framework/Manifest.json",
+          "uri" : ".."          
+        }
+      ],
+
+      "extend" : [ "cache" ],
+      
+      "include" : 
+      [
+        "qx.Class",
+        "qx.Mixin",
+        "qx.Interface"
+      ],
+      
+      "exclude" :
+      [
+        "qx.event.GlobalError"
+      ],
+
+      "environment" :
+      {
+        "qx.debug" : false,
+        "qx.aspects" : false,
+        "qx.globalErrorHandling" : false
+      },
+
+      "compile-options" :
+      {
+        "paths" :
+        {
+          "loader-template" : "../tool/data/generator/oo.loader.tmpl.js"
+        },
+        "uris" :
+        {
+          "script"   : ".",
+          "resource" : "."
+        }
+      }
+    },
+
+
+    "qxoo-build" : 
+    {
+      "extend" : [ "qxoo" ],
+      
+      "compile-options" :
+      {
+        "paths" :
+        {
+          "file" : "build/script/qx-oo.js"
+        },
+        "code" :
+        {
+          "format"   : true,
+          "optimize" : [ "variables", "basecalls", "privates", "strings" ]
+        }
+      },
+      "compile" : { "type" : "build" }
+    },
+    
+    
+    "qxoo-noopt" : 
+    {
+      "extend" : [ "qxoo" ],
+      
+      "compile-options" :
+      {
+        "paths" :
+        {
+          "file" : "build/script/qx-oo-noopt.js"
+        },
+        "code" :
+        {
+          "format"   : true,
+          "optimize" : [ ]
+        }
+      },
+      "compile" : { "type" : "build" }
+    },
+    
+    
+    "build" :
+    {
+      "library" :
+      [
+        {
+          "manifest" : "Manifest.json"
+        }
+      ],
+
+      "extend" : [ "cache" ],
+
+      "include": ["qx.*"],
+      "exclude": ["=qx.test.*"],
+
+      "environment" :
+      {
+        "qx.debug" : true,
+        "qx.aspects" : false
+      },
+
+      "compile-options" :
+      {
+        "paths" :
+        {
+          "file"     : "build/script/qx.js"
+        },
+        "code"  :
+        {
+          "format"   : "on",
+          "optimize" : ["basecalls", "variables", "privates", "strings"]
+        }
+      },
+      
+      "compile" : { "type" : "build" },
+
+      "copy-resources" :
+      {
+        "target" : "build"
+      }
+    },
+
+
+    "test" :
+    {
+      "run" : ["test-copy-files"],
+
+      "let" :
+      {
+        "LOCALES" : ["de", "de_DE", "en", "en_GB", "en_US"],
+        "TEST_EXCLUDE" : "qx.test.performance.*"
+      }
+    },
+    
+    "test-inline" :
+    {
+      "run" : ["test-copy-files"],
+
+      "let" :
+      {
+        "LOCALES" : ["de", "de_DE", "en", "en_GB", "en_US"],
+        "TEST_EXCLUDE" : "qx.test.performance.*"
+      }
+    },
+
+    "test-copy-files" :
+    {
+      "extend" : [ "cache" ],
+
+      "copy-files" :
+      {
+        "files"    : [ "test" ],
+        "source"   : "source/resource/qx",
+        "target"   : "test/resource/qx"
+      }
+    },
+
+
+    "test-source" :
+    {
+      "let" :
+      {
+        "LOCALES" : ["de", "de_DE", "en", "en_GB", "en_US"],
+        "TEST_EXCLUDE" : "qx.test.performance.*"
+      }
+    },
+    
+    "test-performance" :
+    {
+      "desc" : "Create a Performance Test Runner for the qx.test.performance namespace",
+      
+      "extend" : ["testrunner::build"],
+      
+      "let" :
+      {
+        "TESTRUNNER_VIEW" : "testrunner.view.Performance",
+        "TESTRUNNER_ROOT" : "${QOOXDOO_PATH}/component/testrunner",
+        "TEST_INCLUDE"    : "qx.test.performance.*",
+        "TEST_EXCLUDE"    : "",
+        "BUILD_PATH"      : "${ROOT}/test-performance"
+      }
+    },
+    
+    "test-performance-source" :
+    {
+      "desc" : "Create a Performance Test Runner for the qx.test.performance namespace",
+      
+      "extend" : ["testrunner::build-with-tests-source"],
+      
+      "let" :
+      {
+        "TESTRUNNER_VIEW" : "testrunner.view.Performance",
+        "TESTRUNNER_ROOT" : "${QOOXDOO_PATH}/component/testrunner",
+        "TEST_INCLUDE"    : "qx.test.performance.*",
+        "TEST_EXCLUDE"    : "",
+        "BUILD_PATH"      : "${ROOT}/test-performance"
+      }
+    },
+
+    "images" :
+    {
+      "run" : [ "image-clipping", "image-combine" ]
+    },
+
+    "lint" :
+    {
+      "exclude": ["=qx.test.*", "=qx.dev.unit.Sinon"]
+    },
+
+    "lint-test" :
+    {
+      "include": ["=qx.test.*"]
+    },
+
+    "translation" :
+    {
+      "=include": ["qx.*"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    type : "form",
+    controller : "dirForm",
+    toolbar : [
+        {type : "back"}
+    ]
+
+}

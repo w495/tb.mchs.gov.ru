@@ -1,0 +1,29 @@
+body {
+    color: #063563;
+    background-color: #9dd1ff;
+}
+
+.relief{
+	background-color : #063563;
+    color: #9dd1ff;
+}
+
+#logo-image{
+	background-image: url(css-images/logo-trans-blue.png);
+}
+
+#surface-transport{
+	background-image: url(css-images/transport/surface-transport-tr-blue.png);
+}
+
+#air-transport{
+	background-image: url(css-images/transport/air-transport-tr-blue.png);
+}
+
+#water-transport{
+	background-image: url(css-images/transport/water-transport-tr-blue.png);
+}
+
+#menu li a{
+	color: #2d547b;
+}

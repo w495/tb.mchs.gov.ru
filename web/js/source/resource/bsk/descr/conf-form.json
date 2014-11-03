@@ -1,0 +1,8 @@
+{
+    type : "form",
+    controller : "confForm",
+    toolbar : [
+        {type : "back"}
+    ]
+
+}

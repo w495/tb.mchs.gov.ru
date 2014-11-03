@@ -1,0 +1,29 @@
+{
+    type : "table",
+    toolbar : [
+        {type : "button", name : "Редактировать",
+            action : "resource/bsk/descr/dir-form.json",
+            icon : "icon/32/actions/zoom-in.png",
+            specParam: "tab-row"},
+    ],
+    
+    columns : [
+        {name : "id", alias : "#", type : "float", sortable : true, width:"5%"},
+        {name : "datatime", alias : "Дата", type : "erl_datetime_utc", sortable : true},
+        {name : "name", alias : "Имя", type : "string", sortable : true},
+    ],
+
+    filter : {
+        submit_url : "/get-dirs"
+    },
+
+    vardata : { /* изменяемая часть данных*/
+        id: 1
+    },
+
+    // sort : "datatime",
+    sort : "datatime",
+    ascending : false,
+
+    dblclick_action : "resource/bsk/descr/dir-form.json"
+}

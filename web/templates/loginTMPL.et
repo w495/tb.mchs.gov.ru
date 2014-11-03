@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>МЧС: Администрирование сайта</title>
+<link rel="stylesheet" type="text/css" href="/resource/bsk/css/ecare.css"/>
+</head>
+
+<body>
+    <table valign="middle" align="center" border="0" cellpadding="0" cellspacing="0" width="620">
+        <tbody>
+        <tr style="height:200px;">
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <form id="login" method="post" action="/do_login"><table border="0" cellpadding="5" cellspacing="0" width="310"><tbody>
+                    <tr>
+                        <td class="topLink2" nowrap="nowrap" valign="top">
+                            <span style="position:relative; top:2px;">Логин:&nbsp;&nbsp;</span>
+                        </td>
+                        <td align="right" valign="top">
+                            <input name="login" value="<%printLogin(proplists:get_value(login, Data))%>" class="loginInput" type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="topLink2" nowrap="nowrap">Пароль:&nbsp;&nbsp;</td>
+                        <td align="right"><input name="password" value="" class="loginInput" type="password"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="right">
+                            <input value="Войти!" class="cursorHand" type="submit"/>
+                        </td>
+                    </tr>
+                </tbody></table></form>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top"><%printError(proplists:get_value(error, Data))%></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="left" valign="top" style="height:1px;background:#cccccc;"></td>
+        </tr>
+    </tbody></table>
+</body></html>
+
+
+<%@printError({"bad_password", Count})%> <b style="color:red">Ошибка: неправильный пароль, осталось попыток: <%Count%>.</b>
+<%@printError({"auth_count_overflow", Max})%> <b style="color:red">Ошибка: превышен лимит попыток авторизации. Для восстановления доступа смените пароль через call-центр или SMS.</b>
+<%@printError("bad_customer")%> <b style="color:red">Ошибка: пользователь не зарегистрирован.</b>
+<%@printError(_)%> <b></b>
+
+<%@printLogin(undefined)%>
+<%@printLogin(Login)%><%Login%>
+
